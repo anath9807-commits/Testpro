@@ -1,0 +1,17 @@
+name: Build Android APK
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Build APK
+        uses: valerii-kyryliuk/website-to-android-app-action@v1.1
+        with:
+          websiteUrl: 'https://github.com/${{ github.repository }}' # यह आपके कोड को उठाएगा
+          appName: 'TEST PRO'
+          packageName: 'com.vinay.testpro'
+          icon: 'https://cdn-icons-png.flaticon.com/512/5609/5609138.png' # आप अपनी पसंद का लिंक डाल सकते हैं
