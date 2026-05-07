@@ -710,4 +710,4 @@
         function shareApp() { const c = currentUser.uid.substring(0, 6).toUpperCase(); const msg = shareMessageTemplate.replace("[CODE]", c); if(navigator.share) navigator.share({title:'TEST PRO', text: msg}); else window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`); }
     </script>
 </body>
-</html># Testpro
+</html>
